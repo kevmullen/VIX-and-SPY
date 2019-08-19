@@ -1,3 +1,4 @@
+library(ggplot2)
 vix <- c(1:6449)
 rr <- c(1:6449)
 df <- data.frame(vix,rr)
