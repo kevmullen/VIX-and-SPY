@@ -1,5 +1,5 @@
-library(readxl)
-vi_spy_and_return <- read_excel("~/Desktop/vi spy and return.xlsx")
+library(httr)
+vi_spy_and_return <- read.csv(text=GET("https://raw.githubusercontent.com/kevmullen/VIX-and-SPY/master/vi%20spy%20and%20return.csv?token=AJ6TDP2C6PZXOBUWRG4SV7K5LLXM4"))
 vi_spy_and_return$v<-vi_spy_and_return$`Open vix`
 vi_spy_and_return$r<-vi_spy_and_return$return
 library(ggplot2)
